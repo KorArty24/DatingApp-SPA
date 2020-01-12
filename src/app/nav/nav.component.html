@@ -12,8 +12,6 @@
       <li class="nav-item" routerLinkActive="active">
         <a class="nav-link " [routerLink]="['/messages']" routerLinkActive="router-link-active" >Messages</a>
       </li>
-      
-      
     </ul>
     <div *ngIf="loggedIn()" class="dropdown" dropdown>
       <a class="dropdown-toggle text-light" dropdownToggle>
@@ -27,9 +25,9 @@
       </div>
     </div>
     <form *ngIf="!loggedIn()" #loginform="ngForm" class="form-inline my-2 my-lg-0" (ngSubmit)=login();>
-      <input class="form-control mr-sm-2" type="text" placeholder="Search" name="username" aria-label="Username" required [(ngModel)]="model.username">
-      <input class="form-control mr-sm-2" type="password" placeholder="Search" name="password" aria-label="Passwprd" required [(ngModel)]="model.password">
-      <button [disabled]="!loginform.valid" class="btn btn-outline-success my-2 my-sm-0" type="submit">LogIn</button>
+      <input class="form-control mr-sm-2" type="text" placeholder="Username" name="username" aria-label="Username" required [(ngModel)]="model.username"/>
+      <input class="form-control mr-sm-2" type="password" placeholder="Search" name="password" aria-label="Passwprd" required [(ngModel)]="model.password"/>
+      <button [disabled]="!loginform.valid" class="btn btn-success my-2 my-sm-0" type="submit">LogIn</button>
     </form>
   </div>
   

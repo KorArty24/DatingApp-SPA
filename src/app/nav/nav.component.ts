@@ -12,7 +12,7 @@ export class NavComponent implements OnInit {
   model: any = {};
 
   constructor(public authService: AuthService, private alertify: AlertifyService,
-  private router: Router) { }
+              private router: Router) { }
 
   ngOnInit() {
   }
@@ -29,10 +29,8 @@ export class NavComponent implements OnInit {
   }
   logout() {
     localStorage.removeItem('token');
+    this.alertify.message('logged out');
     this.router.navigate(['/home']);
-    console.log('logged out');
-
-    
   }
 
 
